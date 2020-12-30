@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Facts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts generator website</title>
+</head>
+<body>
+    <style type="text/css">
+        body{
+    background-color: #AAA2B4;
+}
+#here{
+    border: 5px solid black;
+    font-size: 25px;
+    background-color: #000;
+    font-family: Rockwell, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+#btn{
+    font-family: Rockwell, sans-serif;
+    background-color: pink;
+    font-family: monospace, sans-serif;
+    color: #fff;
+    margin-top: 250px;
+    margin-left: 490px;
+    font-size: 20px;
+}
+    </style>
+    <div id="container">
+        
+         <div id="here">
+
+         </div>
+         <br>
+         <button id="btn" onclick="generateFacts()">Click me for random Facts!</button>
+
+    </div>
+<script type="text/javascript">
+    function generateFacts(){
+        var facts =["North Korea and Cuba are the only places you can't buy Coca-Cola. ", "The entire world's population could fit inside Los Angeles", 'The hottest chili pepper in the world is so hot it could kill you', "Chameleons don't change color to blend into their surroundings.", 'There’s only one letter that doesn’t appear in any U.S. state name and that letter is Q', 'Scotland has 421 words for “snow” ❄️', 'The longest English word is 189,819 letters long 😵', "Octopuses lay 56,000 eggs at a time 🐙", "Cats have fewer toes on their back paws 😺"];
+        var amount = facts.length;
+        var randomFacts = facts[Math.floor(Math.random()*amount)];
+        document.getElementById('here').innerHTML = randomFacts;
+        console.log(randomFacts)
+    }
+</script>
+</body>
+</html>
